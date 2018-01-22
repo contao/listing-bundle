@@ -272,15 +272,12 @@ class ModuleListing extends \Module
 
 			$class = '';
 			$sort = 'asc';
-			
+			$strField = $arrFields[$i];
+
 			// Field label
 			if (isset($GLOBALS['TL_DCA'][$this->list_table]['fields'][$arrFields[$i]]['label']))
 			{
 				$strField = is_array($GLOBALS['TL_DCA'][$this->list_table]['fields'][$arrFields[$i]]['label']) ? $GLOBALS['TL_DCA'][$this->list_table]['fields'][$arrFields[$i]]['label'][0] : $GLOBALS['TL_DCA'][$this->list_table]['fields'][$arrFields[$i]]['label'];
-			}
-			else
-			{
-				$strField = $arrFields[$i];
 			}
 
 			// Add a CSS class to the order_by column
